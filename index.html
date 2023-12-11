@@ -258,6 +258,30 @@
             We conduct qualitative and quantitative evaluations on MVImgNet and ShapeNet to show that our model represents a step forward towards 
             enabling true in-the-wild novel-view synthesis from a single image.
           </p>
+          <p>
+            The contributions of this paper are as follow.
+            <ul>
+              <li>
+                Our novel decoder maps MAE features to 3D tokens via cross-attention and adaptive layer normalization 
+                conditioned on camera parameters to tackle scale ambiguities. 
+              </li>
+              <li>
+                Efficient inference as it only needs one feed-forward pass.
+              </li>
+              <li>
+                NViST only requires relative pose during training and does not require a canonicalized dataset. 
+              </li>
+              <li>
+                Our qualitative and quantitative evaluations on test (unseen) scenes and 
+                categories show competitive performance on challenging real-world scenes.
+              </li>
+              <li>
+                We demonstrate good performance on a zero-shot new-view synthesis task on 
+                out-of-distribution scenes captured on a mobile-phone device.
+              </li>
+            </ul>
+          </p>
+
         </div>
       </div>
     </div>
