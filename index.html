@@ -104,7 +104,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <!-- <span class="link-block">
-                <a href="https://wbjang.github.io/test_web/"
+                <a href="https://wbjang.github.io/nvist_webpage/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -113,7 +113,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://wbjang.github.io/test_web/"
+                <a href="https://wbjang.github.io/nvist_webpage/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -133,7 +133,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://wbjang.github.io/test_web/"
+                <a href="https://wbjang.github.io/nvist_webpage/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -234,7 +234,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -262,19 +261,6 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -285,8 +271,19 @@
         <h2 class="title is-3">Methodology</h2>
         <div class="content has-text-justified">
           <p>
-            <img src="./source/methodology.png">
-            
+            <img src="./source/methodology.png">            
+          </p>
+          <p>
+            NViST is a feed-forward transformer-based model that takes a single in-the-wild image as input,
+            and renders a novel view. The encoder, a finetuned Masked Autoencoder(MAE), generates self-supervised feature tokens and a class token(CLS).
+            Our novel decoder conditioned on normalised focal lengths and camera distance via adaptive layer normalisation,
+            translates feature tokens to output tokens via cross-attention, and reasons about the occluded region through self-attention.
+          </p>
+          <p>
+            An MLP to reshape the output tokens into a vector-matrix representation that encodes the radiance field and can be queried to obtain the color
+            and sigma of points to perform volume rendering. NViST is trained end-to-end via a combination of losses: 
+            photometric, perceptual and a distortion-based regulariser. NViST is efficient at inference since it requires only a single forward-pass to predict
+            a 3D from an input image.
           </p>
         </div>
       </div>
