@@ -291,39 +291,12 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Methodology</h2>
-        <div class="content has-text-justified">
-          <p>
-            <img src="./source/methodology.png">            
-          </p>
-          <p>
-            NViST is a feed-forward transformer-based model that takes a single in-the-wild image as input,
-            and renders a novel view. The encoder, a finetuned Masked Autoencoder(MAE), generates self-supervised feature tokens and a class token(CLS).
-            Our novel decoder conditioned on normalised focal lengths and camera distance via adaptive layer normalisation,
-            translates feature tokens to output tokens via cross-attention, and reasons about the occluded region through self-attention.
-          </p>
-          <p>
-            An MLP to reshape the output tokens into a vector-matrix representation that encodes the radiance field and can be queried to obtain the color
-            and sigma of points to perform volume rendering. NViST is trained end-to-end via a combination of losses: 
-            photometric, perceptual and a distortion-based regulariser. NViST is efficient at inference since it requires only a single forward-pass to predict
-            a 3D from an input image.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      Novel View Synthesis
-      <div class="column is-centered">
-        <h2 class="title is-3">Compare with Ground Truth</h2>
+      <div class="column">
+        <h2 class="title is-3">Novel View Synthesis</h2>
         <div class="content has-text-justified">
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./source/nvs_compare_with_gt.mp4"
